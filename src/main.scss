@@ -1,0 +1,166 @@
+@use 'vuetify' with (
+  $utilities: false,
+  $color-pack: false,
+);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Minecraft AE Pixel";
+  src: local("Minecraft AE Pixel"), url("./fonts/Minecraft AE.ttf") format("truetype");
+  font-weight: 400;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  overflow-x: hidden!important;
+  overflow-y: scroll!important;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.typo-block {
+  h1, h2, h3, h4, h5, h6 {
+    margin: 5px 0 !important;
+    font-weight: bold !important;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 15px;
+  }
+
+  hr {
+    margin: 10px 0;
+  }
+
+  ul {
+    list-style-type: square;
+    list-style-position: inside;
+
+    & > li > ul,
+    & > li > ol, {
+      margin-left: 10px;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-left: 20px;
+
+    & > li > ul,
+    & > li > ol {
+      margin-left: 10px;
+    }
+  }
+
+  a {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  blockquote {
+    margin: 10px 0;
+    border-left: 3px solid #DDD;
+    padding-left: 10px;
+  }
+
+  code {
+    display: inline-block;
+    padding: 2px 5px;
+    background: #EEE;
+    border-radius: 2px;
+  }
+
+  pre > code {
+    display: block;
+    border: 1px solid #DDD;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  table {
+    margin: 10px 0;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+
+    td, th {
+      padding: 5px 10px;
+    }
+
+    thead > tr {
+      border-bottom: 1px solid #DDD;
+
+      & > th {
+        background: #EEE;
+
+        &:not(:first-child) {
+          border-left: 1px solid #DDD;
+        }
+      }
+    }
+
+    tbody > tr {
+      &:not(:last-child) {
+        border-bottom: 1px solid #DDD;
+      }
+
+      & > td, & > th {
+        &:not(:first-child) {
+          border-left: 1px solid #DDD;
+        }
+      }
+    }
+
+  }
+}
